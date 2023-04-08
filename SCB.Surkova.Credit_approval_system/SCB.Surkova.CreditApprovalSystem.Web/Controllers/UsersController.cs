@@ -1,14 +1,14 @@
-﻿using SCB.Surkova.CreditApprovalSystem.BLL.Interfaces;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.Mvc;
+using SCB.Surkova.CreditApprovalSystem.BLL.Interfaces;
 using SCB.Surkova.CreditApprovalSystem.Entities;
 using SCB.Surkova.CreditApprovalSystem.Web.Models;
 using SCB.Surkova.CreditApprovalSystem.Web.Models.ScanVMs;
 using SCB.Surkova.CreditApprovalSystem.Web.Models.User;
 using SCB.Surkova.CreditApprovalSystem.Web.Models.UserVMs;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
 
 namespace SCB.Surkova.CreditApprovalSystem.Web.Controllers
 {
@@ -27,7 +27,7 @@ namespace SCB.Surkova.CreditApprovalSystem.Web.Controllers
         {
             var user = _userLogic.GetUserByLogin(User.Identity.Name);
             var viewUser = AutoMapperConfig.mapper.Map<DisplayUserVM>(user);
-            return View(viewUser);
+            return View(viewUser as object);
         }
 
         [Authorize(Roles = UserRoles.Admin)]
@@ -38,36 +38,36 @@ namespace SCB.Surkova.CreditApprovalSystem.Web.Controllers
             return PartialView("GetUsers", model);
         }
 
-        [Authorize(Roles = UserRoles.Admin)]
-        public ActionResult Edit(DisplayUserVM model)
-        {
-            return View(model);
-        }
+        // [Authorize(Roles = UserRoles.Admin)]
+        // public ActionResult Edit(DisplayUserVM model)
+        // {
+        //     return View(model);
+        // }
 
         [HttpPost]
-        [Authorize(Roles = UserRoles.Admin)]
-        public ActionResult Edit(DisplayUserVM model, string roles)
-        {
-            try
-            {
-                var user = _userLogic.GetUserById(AutoMapperConfig.mapper.Map<User>(model).Id);
-                _userLogic.AddRole(user, roles);
-            }
-            catch (Exception ex)
-            {
-                ModelState.AddModelError("", ex.Message);
-                return View(model);
-            }
-
-            return RedirectToAction("GetUsers.cshtml");
-        }
+        // [Authorize(Roles = UserRoles.Admin)]
+        // public ActionResult Edit(DisplayUserVM model, string roles)
+        // {
+        //     try
+        //     {
+        //         var user = _userLogic.GetUserById(AutoMapperConfig.mapper.Map<User>(model).Id);
+        //         _userLogic.AddRole(user, roles);
+        //     }
+        //     catch (Exception ex)
+        //     {
+        //         ModelState.AddModelError("", ex.Message);
+        //         return View(model);
+        //     }
+        //
+        //     return RedirectToAction("GetUsers.cshtml");
+        // }
 
         [Authorize(Roles = UserRoles.User)]
         public ActionResult EditProfile()
         {
             var user = _userLogic.GetUserByLogin(User.Identity.Name);
             var userView = AutoMapperConfig.mapper.Map<EditUserVM>(user);
-            return View(userView);
+            return View(userView as object);
         }
 
         [HttpPost]

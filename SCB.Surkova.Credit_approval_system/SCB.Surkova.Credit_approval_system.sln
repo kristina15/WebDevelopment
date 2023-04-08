@@ -39,7 +39,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SCB.Surkova.CreditApprovalS
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SCB.Surkova.CreditApprovalSystem.Entities", "SCB.Surkova.CreditApprovalSystem.Entities\SCB.Surkova.CreditApprovalSystem.Entities.csproj", "{F07D238D-11E1-4F67-9EDE-0E730A32D67F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication2", "WebApplication2\WebApplication2.csproj", "{481D5DEA-4506-4D38-BD8A-FA66E03740D6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SCB.Surkova.CreditApprovalSystem.Web", "SCB.Surkova.CreditApprovalSystem.Web\SCB.Surkova.CreditApprovalSystem.Web.csproj", "{481D5DEA-4506-4D38-BD8A-FA66E03740D6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,11 +1,11 @@
-﻿using SCB.Surkova.CreditApprovalSystem.BLL.Interfaces;
-using SCB.Surkova.CreditApprovalSystem.Entities;
-using SCB.Surkova.CreditApprovalSystem.Web.Models;
-using SCB.Surkova.CreditApprovalSystem.Web.Models.User;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Web.Mvc;
 using System.Web.Security;
+using SCB.Surkova.CreditApprovalSystem.BLL.Interfaces;
+using SCB.Surkova.CreditApprovalSystem.Entities;
+using SCB.Surkova.CreditApprovalSystem.Web.Models;
+using SCB.Surkova.CreditApprovalSystem.Web.Models.User;
 using Roles = System.Web.Security.Roles;
 
 namespace SCB.Surkova.CreditApprovalSystem.Web.Controllers

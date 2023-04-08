@@ -8,20 +8,20 @@ namespace SCB.Surkova.CreditApprovalSystem.Web.Models
     {
         [Required]
         [StringLength(200, MinimumLength = 2)]
-        [Remote("IsUserNameAllowed", "Validation")]
+        //[Remote("IsUserNameAllowed", "Validation")]
         [RegularExpression(@"^(([A-Z]{1}\'?[a-z]{1,23}\-?[a-z]{1,11})|([А-Я]{1}\'?[а-яё]{1,23}\-?[а-яё]{1,11}))$", ErrorMessage ="Invalid name")]
         [Display(Name = "Name")]
         public string FirstName { get; set; }
 
         [Required]
         [StringLength(200, MinimumLength = 2)]
-        [Remote("IsUserNameAllowed", "Validation")]
+        //[Remote("IsUserNameAllowed", "Validation")]
         [RegularExpression(@"^(([A-Z]{1}\'?[a-z]{1,23}\-?[a-z]{1,11})|([А-Я]{1}\'?[а-яё]{1,23}\-?[а-яё]{1,11}))$", ErrorMessage ="Invalid surname")]
         [Display(Name = "Surname")]
         public string Surname { get; set; }
 
         [StringLength(200, MinimumLength = 2)]
-        [Remote("IsUserNameAllowed", "Validation")]
+        //[Remote("IsUserNameAllowed", "Validation")]
         [RegularExpression(@"(^(([A-Z]{1}\'?[a-z]{1,23}\-?[a-z]{1,11})|([А-Я]{1}\'?[а-яё]{1,23}\-?[а-яё]{1,11}))$)*", ErrorMessage ="Invalid patronymic")]
         [Display(Name = "Patronymic*")]
         public string Patronymic { get; set; }

@@ -1,11 +1,11 @@
-﻿using SCB.Surkova.CreditApprovalSystem.BLL.Interfaces;
-using SCB.Surkova.CreditApprovalSystem.Entities;
-using SCB.Surkova.CreditApprovalSystem.Web.Models;
-using SCB.Surkova.CreditApprovalSystem.Web.Models.LoanVMs;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Mvc;
+using SCB.Surkova.CreditApprovalSystem.BLL.Interfaces;
+using SCB.Surkova.CreditApprovalSystem.Entities;
+using SCB.Surkova.CreditApprovalSystem.Web.Models;
+using SCB.Surkova.CreditApprovalSystem.Web.Models.LoanVMs;
 
 namespace SCB.Surkova.CreditApprovalSystem.Web.Controllers.WebApi
 {
@@ -27,7 +27,7 @@ namespace SCB.Surkova.CreditApprovalSystem.Web.Controllers.WebApi
             var loans = _loanLogic.GetLoansOfUser(user);
             var viewLoans = AutoMapperConfig.mapper.Map<IEnumerable<DisplayLoanVM>>(loans);
             ViewBag.TemporaryLoans = AutoMapperConfig.mapper.Map<IEnumerable<DisplayLoanVM>>(GetLoans());
-            return View(viewLoans);
+            return View(viewLoans as object);
         }
 
         [HttpPost]

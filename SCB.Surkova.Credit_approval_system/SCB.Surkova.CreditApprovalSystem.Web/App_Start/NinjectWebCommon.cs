@@ -16,7 +16,7 @@ namespace SCB.Surkova.CreditApprovalSystem.Web.App_Start
         {
             DynamicModuleUtility.RegisterModule(typeof(OnePerRequestHttpModule));
             DynamicModuleUtility.RegisterModule(typeof(NinjectHttpModule));
-            bootstrapper.Initialize(Common.NinjectConfig.Config.CreateKernel);
+            bootstrapper.Initialize(NinjectConfig.Config.CreateKernel);
         }
 
         public static void Stop()

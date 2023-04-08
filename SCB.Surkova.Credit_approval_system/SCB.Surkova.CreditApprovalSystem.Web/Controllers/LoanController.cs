@@ -1,10 +1,10 @@
-﻿using SCB.Surkova.CreditApprovalSystem.BLL.Interfaces;
+﻿using System;
+using System.Collections.Generic;
+using System.Web.Mvc;
+using SCB.Surkova.CreditApprovalSystem.BLL.Interfaces;
 using SCB.Surkova.CreditApprovalSystem.Web.Models;
 using SCB.Surkova.CreditApprovalSystem.Web.Models.LoanVMs;
 using SCB.Surkova.CreditApprovalSystem.Web.Models.User;
-using System;
-using System.Collections.Generic;
-using System.Web.Mvc;
 
 namespace SCB.Surkova.CreditApprovalSystem.Web.Controllers
 {
@@ -24,7 +24,7 @@ namespace SCB.Surkova.CreditApprovalSystem.Web.Controllers
         public ActionResult GetCurrentLoans()
         {
             var model = AutoMapperConfig.mapper.Map<IEnumerable<DisplayLoanVM>>(_loanLogic.GetCurrentLoans());
-            return View(model);
+            return View(model as object);
         }
 
         [Authorize(Roles = UserRoles.Underwriter)]

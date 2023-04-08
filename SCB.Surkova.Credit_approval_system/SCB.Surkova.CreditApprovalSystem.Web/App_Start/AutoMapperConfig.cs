@@ -1,5 +1,4 @@
-﻿using AutoMapper;
-using SCB.Surkova.CreditApprovalSystem.Entities;
+﻿using SCB.Surkova.CreditApprovalSystem.Entities;
 using SCB.Surkova.CreditApprovalSystem.Hash.Interfaces;
 using SCB.Surkova.CreditApprovalSystem.Web.Models;
 using SCB.Surkova.CreditApprovalSystem.Web.Models.LoanVMs;
@@ -11,6 +10,7 @@ using System;
 using System.Collections.Generic;
 using System.Web;
 using System.Web.Mvc;
+using AutoMapper;
 
 namespace SCB.Surkova.CreditApprovalSystem.Web
 {
