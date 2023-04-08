@@ -1,0 +1,7 @@
+{
+  "profiles": {
+    "SCB.Surkova.CreditApprovalSystem.Tests": {
+      "commandName": "Executable"
+    }
+  }
+}

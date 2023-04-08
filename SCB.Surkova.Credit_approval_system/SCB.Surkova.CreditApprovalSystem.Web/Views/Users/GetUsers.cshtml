@@ -1,0 +1,33 @@
+﻿@model IEnumerable<DisplayUserVM>
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "GetUsers";
+}
+@section scripts{
+    <script src="~/Scripts/ApiScripts/MyScripts.js"></script>
+}
+<br />
+@using (Html.BeginForm())
+{
+    <table class="table table-striped" id="dataTable">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.FirstName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Surname)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Patronymic)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Login)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Roles)
+            </th>
+            <th></th>
+        </tr>
+        @Html.Partial("~/Views/Shared/UserPartial/_UsersPartial.cshtml", Model)
+    </table>
+}

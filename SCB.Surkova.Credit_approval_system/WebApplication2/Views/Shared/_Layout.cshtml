@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creadit approval system</title>
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/MyStyle/style.css" rel="stylesheet" />
+    <script src="~/Scripts/modernizr-2.5.3.js"></script>
+    <script>
+        var $form
+    </script>
+</head>
+<body style="padding-top:0px">
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container-fluid" style="justify-content:normal">
+            <a class="navbar-brand">
+                @Html.Action("LoginBlock", "Account", new { @class = "text-white h4" })
+                @* @Html.Action("ToolBox", "Account", new { @class = "text-white h4" }) *@
+            </a>
+        </div>
+    </nav>
+
+    <div class="body-content" style="padding-left:50px">
+        @RenderBody()
+    </div>
+
+    <script src="~/Scripts/jquery-1.5.2.min.js"></script>
+    <script src="~/Scripts/bootstrap.js"></script>
+
+    <script>
+        var CFG = {
+            saveLoansUrl: '@Url.Action("SaveLoans", "LoanApi")',
+            createLoanUrl: '@Url.Action("CreateLoan", "LoanApi")',
+            deleteUrl: '@Url.Action("DeleteLoan", "LoanApi")',
+            deleteNewLoanUrl: '@Url.Action("DeleteNewLoan", "LoanApi")',
+            updateStatus: '@Url.Action("UpdateStatus", "LoanApi")',
+            addRole: '@Url.Action("AddRole", "LoanApi")',
+        }
+    </script>
+
+    @RenderSection("scripts", required: false);
+</body>
+</html>

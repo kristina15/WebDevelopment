@@ -1,0 +1,6 @@
+﻿@model IEnumerable<DisplayUserVM>
+
+@foreach (var user in Model)
+{
+    @Html.Partial("~/Views/Shared/UserPartial/_UserPartial.cshtml", user)
+}

@@ -1,0 +1,13 @@
+﻿<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+    <li class="nav-item">
+        @Html.ActionLink("View all users", "GetUsers", "Users", null, new { @class = "btn btn-dark" })
+    </li>
+</ul>
+
+@using (Html.BeginForm("GetUserBySurname", "Users", FormMethod.Get, new { @class = "d-flex" }))
+{
+    @Html.AntiForgeryToken();
+    <input class="form-control me-2" type="search" placeholder="User's surname" aria-label="User's surname" name="surname">
+    <input type="submit" value="Search" class="btn btn-outline-light" />
+}
+

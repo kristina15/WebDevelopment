@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D8532BFB-CAA1-4DE5-9781-6AFC327ADCFB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SCB.Surkova.Credit_approval_system.Common</RootNamespace>
+    <AssemblyName>SCB.Surkova.Credit_approval_system.Common</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FluentValidation, Version=11.0.0.0, Culture=neutral, PublicKeyToken=7de548da2fbae0f0, processorArchitecture=MSIL">
+      <HintPath>..\packages\FluentValidation.11.5.1\lib\netstandard2.0\FluentValidation.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.3\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.2\lib\netstandard2.0\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DependencyResolver.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SCB.Surkova.Credit_approval_system.BLL.Interfaces\SCB.Surkova.CreditApprovalSystem.BLL.Interfaces.csproj">
+      <Project>{67DC4812-3FFA-48D7-AA22-B99EE95E547F}</Project>
+      <Name>SCB.Surkova.CreditApprovalSystem.BLL.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SCB.Surkova.Credit_approval_system.BLL\SCB.Surkova.CreditApprovalSystem.BLL.csproj">
+      <Project>{46a1ae51-c20a-4500-95b6-ea8d06e48cf8}</Project>
+      <Name>SCB.Surkova.CreditApprovalSystem.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SCB.Surkova.Credit_approval_system.DAL.Interfaces\SCB.Surkova.CreditApprovalSystem.DAL.Interfaces.csproj">
+      <Project>{DD7FE576-C46F-438B-9DC3-BAC4817732D9}</Project>
+      <Name>SCB.Surkova.CreditApprovalSystem.DAL.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SCB.Surkova.Credit_approval_system.DAL\SCB.Surkova.CreditApprovalSystem.DAL.csproj">
+      <Project>{8c100198-d174-43ce-aace-11f566fd092c}</Project>
+      <Name>SCB.Surkova.CreditApprovalSystem.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SCB.Surkova.Credit_approval_system.Hash.Interfaces\SCB.Surkova.CreditApprovalSystem.Hash.Interfaces.csproj">
+      <Project>{5381C388-651E-4BFA-8771-48E46D8DADDE}</Project>
+      <Name>SCB.Surkova.CreditApprovalSystem.Hash.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SCB.Surkova.Credit_approval_system.HashGenerator\SCB.Surkova.CreditApprovalSystem.HashGenerator.csproj">
+      <Project>{D2269BD5-8189-4576-B2C3-62378CAD3281}</Project>
+      <Name>SCB.Surkova.CreditApprovalSystem.HashGenerator</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SCB.Surkova.Credit_approval_system.Validation.Inter\SCB.Surkova.CreditApprovalSystem.Validation.Inter.csproj">
+      <Project>{35D7614D-3C99-45D2-AACE-545EA7722167}</Project>
+      <Name>SCB.Surkova.CreditApprovalSystem.Validation.Inter</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SCB.Surkova.Credit_approval_system.Validation\SCB.Surkova.CrediApprovalSystem.Validation.csproj">
+      <Project>{06F8612B-8673-4660-A984-BCB55A9C9FFF}</Project>
+      <Name>SCB.Surkova.CrediApprovalSystem.Validation</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

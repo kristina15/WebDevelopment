@@ -1,0 +1,52 @@
+﻿@using SCB.Surkova.CreditApprovalSystem.Web.Models.LoanVMs
+@model IEnumerable<SCB.Surkova.CreditApprovalSystem.Web.Models.LoanVMs.DisplayLoanVM>
+
+@{
+    ViewBag.Title = "CreateLoan";
+}
+
+@section scripts
+{
+    <script src="~/Scripts/ApiScripts/MyScripts.js"></script>
+}
+<br />
+
+@using (Html.BeginForm("CreateLoan", "LoanApi", FormMethod.Post, new { id = "newLoan" }))
+{
+    @Html.AntiForgeryToken();
+    <div class="d-flex">
+        <input type="number" class="form-control" name="sum">
+        <br />
+        <button type="button" class="btn btn-default" id="addLoan">Add loan</button>
+        <button type="submit" class="btn btn-success">Save changes</button>
+    </div>
+}
+
+@if (!Model.Any())
+{
+    @:(not found)
+}
+else
+{
+    <table class="table" id="myTable">
+        <tbody id="loanList">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Sum)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DateCreate)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Status)
+                </th>
+                <th></th>
+            </tr>
+            @Html.Partial("~/Views/Shared/LoanPartial/_UserLoansPartial.cshtml", Model)
+            @Html.Partial("~/Views/Shared/LoanPartial/_UserLoansPartial.cshtml", (IEnumerable<DisplayLoanVM>)ViewBag.TemporaryLoans)
+        </tbody>
+
+    </table>
+}
+
+

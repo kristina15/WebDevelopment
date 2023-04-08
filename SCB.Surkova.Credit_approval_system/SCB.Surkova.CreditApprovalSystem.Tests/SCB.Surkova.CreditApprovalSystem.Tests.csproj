@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net472</TargetFramework>
+
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentValidation" Version="11.5.1" />
+    <PackageReference Include="Moq" Version="4.16.1" />
+    <PackageReference Include="NUnit" Version="3.12.0" />
+    <PackageReference Include="NUnit3TestAdapter" Version="3.16.1" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SCB.Surkova.Credit_approval_system.BLL.Interfaces\SCB.Surkova.CreditApprovalSystem.BLL.Interfaces.csproj" />
+    <ProjectReference Include="..\SCB.Surkova.Credit_approval_system.BLL\SCB.Surkova.CreditApprovalSystem.BLL.csproj" />
+    <ProjectReference Include="..\SCB.Surkova.Credit_approval_system.Hash.Interfaces\SCB.Surkova.CreditApprovalSystem.Hash.Interfaces.csproj" />
+    <ProjectReference Include="..\SCB.Surkova.Credit_approval_system.HashGenerator\SCB.Surkova.CreditApprovalSystem.HashGenerator.csproj" />
+    <ProjectReference Include="..\SCB.Surkova.Credit_approval_system.Validation.Inter\SCB.Surkova.CreditApprovalSystem.Validation.Inter.csproj" />
+  </ItemGroup>
+
+</Project>

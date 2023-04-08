@@ -1,0 +1,8 @@
+﻿@using SCB.Surkova.CreditApprovalSystem.Web.Models.LoanVMs
+@model IEnumerable<SCB.Surkova.CreditApprovalSystem.Web.Models.LoanVMs.DisplayLoanVM>
+
+@foreach (DisplayLoanVM item in Model)
+{
+    @Html.Partial("~/Views/Shared/LoanPartial/_UserLoanPartial.cshtml", item)
+}
+
