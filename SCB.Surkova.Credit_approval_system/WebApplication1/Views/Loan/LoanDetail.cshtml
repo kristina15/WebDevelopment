@@ -1,0 +1,97 @@
+﻿@using WebApplication1.Models.LoanVMs;
+@using WebApplication1.Models.UserVMs;
+@model Tuple<DisplayLoanVM, DisplayUserVM>
+
+@{
+    ViewBag.Title = "UpdateStatus";
+}
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <br />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.Item1.Id)
+        <div class="form-group">
+            <b>
+                @Html.LabelFor(model => model.Item2.FirstName, htmlAttributes: new { @class = "control-label col-md-2" })
+            </b>
+            <div class="col-md-10">
+                @Html.DisplayFor(model => model.Item2.FirstName, new { htmlAttributes = new { @class = "form-control" } })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <b>
+                @Html.LabelFor(model => model.Item2.Surname, htmlAttributes: new { @class = "control-label col-md-2" })
+            </b>
+            <div class="col-md-10">
+                @Html.DisplayFor(model => model.Item2.Surname, new { htmlAttributes = new { @class = "form-control" } })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <b>
+                @Html.LabelFor(model => model.Item2.Patronymic, htmlAttributes: new { @class = "control-label col-md-2" })
+            </b>
+            <div class="col-md-10">
+                @Html.DisplayFor(model => model.Item2.Patronymic, new { htmlAttributes = new { @class = "form-control" } })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <b>
+                @Html.LabelFor(model => model.Item2.Passport, htmlAttributes: new { @class = "control-label col-md-2" })
+            </b>
+            <div class="col-md-10">
+                @Html.DisplayFor(model => model.Item2.Passport.Series, new { htmlAttributes = new { @class = "form-control" } }) @Html.DisplayFor(model => model.Item2.Passport.Number, new { htmlAttributes = new { @class = "form-control" } })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @foreach (var item in Model.Item2.Passport.Scans)
+            {
+                <div class="col-md-10">
+                    <img src="@String.Format("data:image/jpg;base64,{0}", item.Image)" style="width:100px; height:120px" />
+                </div>
+            }
+
+        </div>
+
+        <div class="form-group">
+            <b>
+                @Html.LabelFor(model => model.Item2.AdditionalFile, htmlAttributes: new { @class = "control-label col-md-2" })
+            </b>
+            <div class="col-md-10">
+                <img src="@String.Format("data:image/jpg;base64,{0}", Model.Item2.AdditionalFile.Image)" style="width:100px; height:120px" />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <b>
+                @Html.LabelFor(model => model.Item1.Sum, htmlAttributes: new { @class = "control-label col-md-2" })
+            </b>
+            <div class="col-md-10">
+                @Html.DisplayFor(model => model.Item1.Sum, new { htmlAttributes = new { @class = "form-control" } })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <b>
+                @Html.LabelFor(model => model.Item1.DateCreate, htmlAttributes: new { @class = "control-label col-md-2" })
+            </b>
+            <div class="col-md-10">
+                @Html.DisplayFor(model => model.Item1.DateCreate, new { htmlAttributes = new { @class = "form-control" } })
+            </div>
+        </div>
+
+        <br />
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                @Html.ActionLink("Back to List", "GetCurrentLoans", null, new { @class = "btn btn-primary" })
+            </div>
+        </div>
+    </div>
+}

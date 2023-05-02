@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>f8326077-c3a4-4566-b7e8-7403037d642b</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Autofac" Version="7.0.1" />
+    <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="8.0.0" />
+    <PackageReference Include="AutoMapper" Version="10.0.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.17.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SCB.Surkova.Credit_approval_system.BLL.Interfaces\SCB.Surkova.CreditApprovalSystem.BLL.Interfaces.csproj" />
+    <ProjectReference Include="..\SCB.Surkova.Credit_approval_system.Common\SCB.Surkova.CreditApprovalSystem.Common.csproj" />
+    <ProjectReference Include="..\SCB.Surkova.Credit_approval_system.Hash.Interfaces\SCB.Surkova.CreditApprovalSystem.Hash.Interfaces.csproj" />
+  </ItemGroup>
+
+</Project>

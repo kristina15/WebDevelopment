@@ -1,0 +1,8 @@
+﻿@using WebApplication1.Models.LoanVMs;
+@model IEnumerable<DisplayLoanVM>
+
+@foreach (DisplayLoanVM item in Model)
+{
+    @Html.Partial("~/Views/Shared/LoanPartial/_UserLoanPartial.cshtml", item)
+}
+

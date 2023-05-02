@@ -1,0 +1,75 @@
+﻿@using WebApplication1.Models.LoanVMs;
+@using WebApplication1.Models.UserVMs;
+@model IEnumerable<Tuple<DisplayLoanVM, DisplayUserVM>>
+
+@{
+
+    ViewBag.Title = "GetHistoryOfLoans";
+}
+<br />
+@if (!Model.Any())
+{
+    @:(not found)
+}
+else
+{
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Item2.FirstName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Item2.Surname)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Item2.Patronymic)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Item2.Passport.Series)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Item2.Passport.Number)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Item1.Sum)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Item1.DateCreate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Item1.Status)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Item2.FirstName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Item2.Surname)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Item2.Patronymic)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Item2.Passport.Series)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Item2.Passport.Number)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Item1.Sum)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Item1.DateCreate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Item1.Status)
+                </td>
+            </tr>
+        }
+    </table>
+}

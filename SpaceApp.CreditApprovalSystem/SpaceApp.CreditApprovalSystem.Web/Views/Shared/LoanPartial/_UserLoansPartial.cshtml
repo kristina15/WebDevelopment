@@ -1,0 +1,8 @@
+﻿@using SpaceApp.CreditApprovalSystem.Web.Models.LoanVMs;
+@model IEnumerable<DisplayLoanVM>
+
+@foreach (DisplayLoanVM item in Model)
+{
+    @Html.Partial("~/Views/Shared/LoanPartial/_UserLoanPartial.cshtml", item)
+}
+

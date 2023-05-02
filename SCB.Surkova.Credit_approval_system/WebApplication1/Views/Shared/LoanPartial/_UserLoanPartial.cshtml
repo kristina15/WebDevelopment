@@ -1,0 +1,44 @@
+﻿@using WebApplication1.Models.LoanVMs;
+@using WebApplication1.Models;
+@model DisplayLoanVM
+@section scripts
+{
+    <script src="~/Scripts/ApiScripts/MyScripts.js"></script>
+}
+@if (Model.Id == 0)
+{
+    <tr style="background-color:lightpink">
+        <td>
+            @Html.DisplayFor(modelItem => modelItem.Sum)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => modelItem.DateCreate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => modelItem.Status)
+        </td>
+        <td>
+            <button type="button" class="btn btn-outline-danger" onclick="DeleteNewLoan(@Model.Sum)">Delete</button>
+        </td>
+    </tr>
+}
+else
+{
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => modelItem.Sum)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => modelItem.DateCreate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => modelItem.Status)
+        </td>
+        <td>
+            @if (Model.Status == LoanStatuses.InWaiting)
+            {
+                <button type="button" class="btn btn-outline-danger" onclick="DeleteLoan(@Model.Id)">Delete</button>
+            }
+        </td>
+    </tr>
+}

@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>e18f61b4-d778-44f8-8cfa-de5ca1c104ca</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="8.0.0" />
+    <PackageReference Include="AutoMapper" Version="12.0.1" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.17.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SpaceApp.CreditApprovalSystem.DI\SpaceApp.CreditApprovalSystem.DI.csproj" />
+    <ProjectReference Include="..\SpaceApp.CreditApprovalSystem.HashGeneratorContracts\SpaceApp.CreditApprovalSystem.HashGeneratorContracts.csproj" />
+    <ProjectReference Include="..\SpaceApp.CreditApprovalSystem.HashGenerator\SpaceApp.CreditApprovalSystem.HashGenerator.csproj" />
+  </ItemGroup>
+
+</Project>

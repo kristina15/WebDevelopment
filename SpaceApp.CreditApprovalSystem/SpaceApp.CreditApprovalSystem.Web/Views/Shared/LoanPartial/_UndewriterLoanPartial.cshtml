@@ -1,0 +1,21 @@
+﻿@using SpaceApp.CreditApprovalSystem.Web.Models.Contants;
+@using SpaceApp.CreditApprovalSystem.Web.Models.LoanVMs;
+@model DisplayLoanVM
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => modelItem.Sum)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => modelItem.DateCreate)
+    </td>
+    <td id="status">
+        @if (Model.Status == LoanStatuses.InWaiting)
+        {
+            @Html.DropDownList("statuses", new SelectList(new string[] { LoanStatuses.Approved, LoanStatuses.Denied }, new { @class = "dropdown-menu", id="statuses"}))
+            <button type="button" onclick="UpdateStatus(@Model.Id)" class="btn btn-success">Save</button>
+        }
+    </td>
+    <td>
+        @Html.ActionLink("Details", "LoanDetail", "Loan", Model, new { @class = "btn btn-outline-success" })
+    </td>
+</tr>

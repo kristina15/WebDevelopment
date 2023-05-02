@@ -1,0 +1,109 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33516.290
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SpaceApp.CreditApprovalSystem.BLL", "SpaceApp.CreditApprovalSystem.BLL\SpaceApp.CreditApprovalSystem.BLL.csproj", "{1BA80CD0-1BC7-42B1-9396-032458F78995}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SpaceApp.CreditApprovalSystem.BLLContracts", "SpaceApp.CreditApprovalSystem.BLLContracts\SpaceApp.CreditApprovalSystem.BLLContracts.csproj", "{DAA2331F-6F79-40BC-AA4B-784432F0E614}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BLL", "BLL", "{C81629D0-22F6-4257-9BCD-15DD25F6C6C1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DAL", "DAL", "{EA742FDA-A146-4DFD-9E45-17674664D188}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{D36A6287-3FF0-4968-9AA1-FF7710C57D25}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PL", "PL", "{60B2EE14-2A2E-4F68-A879-CA29D6AC4F95}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SpaceApp.CreditApprovalSystem.Entities", "SpaceApp.CreditApprovalSystem.Entities\SpaceApp.CreditApprovalSystem.Entities.csproj", "{0AB160EF-A7CA-445B-AFD8-737618BA3BFE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SpaceApp.CreditApprovalSystem.DAL", "SpaceApp.CreditApprovalSystem.DAL\SpaceApp.CreditApprovalSystem.DAL.csproj", "{5135ED4C-0539-4AEF-84FB-4776973D3BC1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SpaceApp.CreditApprovalSystem.DALContracts", "SpaceApp.CreditApprovalSystem.DALContracts\SpaceApp.CreditApprovalSystem.DALContracts.csproj", "{8E891457-E140-4B8D-AAE3-66875B997DFA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SpaceApp.CreditApprovalSystem.DI", "SpaceApp.CreditApprovalSystem.DI\SpaceApp.CreditApprovalSystem.DI.csproj", "{6D8EE0E9-1480-4BB7-AE18-0F6EA3591A90}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SpaceApp.CreditApprovalSystem.Web", "SpaceApp.CreditApprovalSystem.Web\SpaceApp.CreditApprovalSystem.Web.csproj", "{F4493478-25A6-461D-ADC9-FF03B0BF6FCD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SpaceApp.CreditApprovalSystem.ModelValidatorContracts", "SpaceApp.CreditApprovalSystem.ModelValidatorContracts\SpaceApp.CreditApprovalSystem.ModelValidatorContracts.csproj", "{43A8B65B-8DE3-493B-9CC1-CE64271543DE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SpaceApp.CreditApprovalSystem.ModelValidators", "SpaceApp.CreditApprovalSystem.ModelValidators\SpaceApp.CreditApprovalSystem.ModelValidators.csproj", "{674A8996-C53D-411C-965F-D840B1894667}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Utilities", "Utilities", "{F6A6AAFE-B6FB-4942-865A-43FAFCC60F65}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpaceApp.CreditApprovalSystem.HashGenerator", "SpaceApp.CreditApprovalSystem.HashGenerator\SpaceApp.CreditApprovalSystem.HashGenerator.csproj", "{E3EF1CBF-B46C-41A4-9C65-385EE8F198FD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpaceApp.CreditApprovalSystem.HashGeneratorContracts", "SpaceApp.CreditApprovalSystem.HashGeneratorContracts\SpaceApp.CreditApprovalSystem.HashGeneratorContracts.csproj", "{C33A554B-4689-4D64-93C9-7A2E5637504D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1BA80CD0-1BC7-42B1-9396-032458F78995}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1BA80CD0-1BC7-42B1-9396-032458F78995}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1BA80CD0-1BC7-42B1-9396-032458F78995}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1BA80CD0-1BC7-42B1-9396-032458F78995}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DAA2331F-6F79-40BC-AA4B-784432F0E614}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DAA2331F-6F79-40BC-AA4B-784432F0E614}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DAA2331F-6F79-40BC-AA4B-784432F0E614}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DAA2331F-6F79-40BC-AA4B-784432F0E614}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0AB160EF-A7CA-445B-AFD8-737618BA3BFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0AB160EF-A7CA-445B-AFD8-737618BA3BFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0AB160EF-A7CA-445B-AFD8-737618BA3BFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0AB160EF-A7CA-445B-AFD8-737618BA3BFE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5135ED4C-0539-4AEF-84FB-4776973D3BC1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5135ED4C-0539-4AEF-84FB-4776973D3BC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5135ED4C-0539-4AEF-84FB-4776973D3BC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5135ED4C-0539-4AEF-84FB-4776973D3BC1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E891457-E140-4B8D-AAE3-66875B997DFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E891457-E140-4B8D-AAE3-66875B997DFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E891457-E140-4B8D-AAE3-66875B997DFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E891457-E140-4B8D-AAE3-66875B997DFA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D8EE0E9-1480-4BB7-AE18-0F6EA3591A90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D8EE0E9-1480-4BB7-AE18-0F6EA3591A90}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D8EE0E9-1480-4BB7-AE18-0F6EA3591A90}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D8EE0E9-1480-4BB7-AE18-0F6EA3591A90}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F4493478-25A6-461D-ADC9-FF03B0BF6FCD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4493478-25A6-461D-ADC9-FF03B0BF6FCD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4493478-25A6-461D-ADC9-FF03B0BF6FCD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4493478-25A6-461D-ADC9-FF03B0BF6FCD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{43A8B65B-8DE3-493B-9CC1-CE64271543DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43A8B65B-8DE3-493B-9CC1-CE64271543DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43A8B65B-8DE3-493B-9CC1-CE64271543DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43A8B65B-8DE3-493B-9CC1-CE64271543DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{674A8996-C53D-411C-965F-D840B1894667}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{674A8996-C53D-411C-965F-D840B1894667}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{674A8996-C53D-411C-965F-D840B1894667}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{674A8996-C53D-411C-965F-D840B1894667}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E3EF1CBF-B46C-41A4-9C65-385EE8F198FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E3EF1CBF-B46C-41A4-9C65-385EE8F198FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E3EF1CBF-B46C-41A4-9C65-385EE8F198FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E3EF1CBF-B46C-41A4-9C65-385EE8F198FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C33A554B-4689-4D64-93C9-7A2E5637504D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C33A554B-4689-4D64-93C9-7A2E5637504D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C33A554B-4689-4D64-93C9-7A2E5637504D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C33A554B-4689-4D64-93C9-7A2E5637504D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{1BA80CD0-1BC7-42B1-9396-032458F78995} = {C81629D0-22F6-4257-9BCD-15DD25F6C6C1}
+		{DAA2331F-6F79-40BC-AA4B-784432F0E614} = {C81629D0-22F6-4257-9BCD-15DD25F6C6C1}
+		{0AB160EF-A7CA-445B-AFD8-737618BA3BFE} = {D36A6287-3FF0-4968-9AA1-FF7710C57D25}
+		{5135ED4C-0539-4AEF-84FB-4776973D3BC1} = {EA742FDA-A146-4DFD-9E45-17674664D188}
+		{8E891457-E140-4B8D-AAE3-66875B997DFA} = {EA742FDA-A146-4DFD-9E45-17674664D188}
+		{6D8EE0E9-1480-4BB7-AE18-0F6EA3591A90} = {D36A6287-3FF0-4968-9AA1-FF7710C57D25}
+		{F4493478-25A6-461D-ADC9-FF03B0BF6FCD} = {60B2EE14-2A2E-4F68-A879-CA29D6AC4F95}
+		{43A8B65B-8DE3-493B-9CC1-CE64271543DE} = {C81629D0-22F6-4257-9BCD-15DD25F6C6C1}
+		{674A8996-C53D-411C-965F-D840B1894667} = {C81629D0-22F6-4257-9BCD-15DD25F6C6C1}
+		{F6A6AAFE-B6FB-4942-865A-43FAFCC60F65} = {D36A6287-3FF0-4968-9AA1-FF7710C57D25}
+		{E3EF1CBF-B46C-41A4-9C65-385EE8F198FD} = {F6A6AAFE-B6FB-4942-865A-43FAFCC60F65}
+		{C33A554B-4689-4D64-93C9-7A2E5637504D} = {F6A6AAFE-B6FB-4942-865A-43FAFCC60F65}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EE8F2BA8-2B9E-4A8E-A790-5CC0FFCD94D1}
+	EndGlobalSection
+EndGlobal
